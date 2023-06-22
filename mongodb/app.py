@@ -18,7 +18,7 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     album_photos = get_photos()							# Call function in 'models.py' to retrieve all photo's from database
-    return render_template('default.html',album_photos=album_photos,url="home")
+    return render_template('default.html',album_photos=album_photos)
 
 # This route accepts GET and POST calls
 @app.route('/upload', methods=['POST'])

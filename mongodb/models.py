@@ -30,3 +30,4 @@ def insert_photo(request):
     thumbfile = filename.rsplit(".",1)[0] + "-thumb.jpg"
 
     db.photos.insert_one({'title':title, 'comments':comments, 'photo':filename, 'thumb':thumbfile})
+
